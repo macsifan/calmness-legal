@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — Calmness</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./"><span class="mark">▲</span> Calmness</a>
+  <div class="lang">
+    <button type="button" data-lang="ru">Русский</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
+</header>
+
+<!-- ============ RU ============ -->
+<div lang="ru">
+
+<h1>Политика конфиденциальности</h1>
+<p class="updated">Обновлено 3 сентября 2026</p>
+
+<div class="note">
+  <p>Calmness — приложение о том, о чём не говорят вслух. Поэтому принцип простой:
+  <strong>почти всё остаётся на твоём телефоне</strong>. Ниже — честный список того,
+  что покидает устройство, и что не покидает никогда.</p>
+</div>
+
+<h2>Аккаунта нет</h2>
+<p>Мы не просим имя, электронную почту, телефон или логин. Регистрации нет, и мы
+не знаем, кто ты.</p>
+
+<h2>Что остаётся только на устройстве</h2>
+<ul>
+  <li>дневник и все записи в нём;</li>
+  <li>история SOS-сессий, чек-ины настроения, журнал вечеров;</li>
+  <li>переписка с наставником — история диалога хранится локально;</li>
+  <li>прогресс программы 90 дней, плейбук, обещания, стрик;</li>
+  <li>список приложений и сайтов, которые ты заблокировал.</li>
+</ul>
+<p>Эти данные лежат в защищённой области приложения на устройстве. Если у тебя
+включена резервная копия iCloud, они попадают в неё — эту копию делает Apple,
+и доступа к ней у нас нет.</p>
+
+<h2>Экранное время</h2>
+<p>Блокировка работает через системный механизм Apple — Family Controls.
+Выбранные приложения и сайты представлены непрозрачными токенами, которые
+шифрует сама система. <strong>Ни мы, ни кто-либо ещё не видит, что именно ты
+заблокировал.</strong></p>
+
+<h2>Что покидает устройство</h2>
+<p>Ровно два потока, оба по защищённому соединению.</p>
+
+<h2>1. Наставник и разборы</h2>
+<p>Когда ты пишешь наставнику или приложение готовит инсайт, на наш прокси-сервер
+и далее в OpenAI уходят:</p>
+<ul>
+  <li>текст твоих сообщений в чате;</li>
+  <li>обезличенный контекст: сколько дней стрик, сколько было сессий и какая доля
+  успешных, теги триггеров (например «стресс», «ночь»), индекс из вводного опроса,
+  выбранный тон общения, час риск-окна;</li>
+  <li>случайный идентификатор устройства (о нём ниже).</li>
+</ul>
+<p>Не уходят: дневник, записи после срыва, имя, контакты, содержимое заметок.
+По условиям OpenAI API переданные данные не используются для обучения моделей.</p>
+
+<h2>2. Аналитика продукта</h2>
+<p>Мы считаем обезличенные события, чтобы понимать, где приложение ломается:
+запуск, пройденный шаг программы, завершённый SOS (режим, исход, длительность),
+оформленная подписка, экран онбординга. К событию прикладываются короткие
+технические свойства — например, идентификатор триггера или отметка настроения.
+<strong>Свободного текста, дневника и переписки в аналитике нет.</strong>
+Обработчик — PostHog.</p>
+
+<h2>Случайный идентификатор</h2>
+<p>При первом запуске приложение создаёт случайный набор символов и хранит его
+на устройстве. Он не связан с Apple ID, почтой или рекламными идентификаторами
+и нужен только чтобы события одного человека не смешивались с чужими. Удаление
+приложения удаляет и его.</p>
+
+<h2>Покупки</h2>
+<p>Подписку обрабатывает Apple. Данные карты и Apple ID к нам не попадают —
+приложение видит только факт активной подписки.</p>
+
+<h2>Уведомления</h2>
+<p>Все напоминания планируются на самом устройстве. Мы не отправляем пуши
+с сервера и не знаем, открыл ты уведомление или нет.</p>
+
+<h2>Сколько это хранится</h2>
+<ul>
+  <li>На устройстве — пока ты сам не удалишь данные или приложение.</li>
+  <li>Запросы к наставнику мы не сохраняем дольше, чем нужно для ответа;
+  на стороне OpenAI — по их политике, до 30 дней для защиты от злоупотреблений.</li>
+  <li>События аналитики — до 12 месяцев.</li>
+</ul>
+
+<h2>Как всё удалить</h2>
+<ul>
+  <li>В приложении: <strong>Профиль → Удалить все данные</strong>. Стирает локальные
+  данные безвозвратно.</li>
+  <li>Удаление приложения стирает локальные данные и случайный идентификатор.</li>
+  <li>Чтобы стереть события аналитики, напиши нам — удалим по идентификатору
+  (он есть в файле из «Профиль → Экспорт данных»).</li>
+</ul>
+
+<h2>Твои права</h2>
+<p>Ты можешь запросить копию своих данных, их исправление или удаление,
+а также возразить против обработки. Напиши на адрес ниже — ответим в течение
+30 дней.</p>
+
+<h2>Возраст</h2>
+<p>Приложение предназначено для совершеннолетних (18+). Мы сознательно
+не собираем данные детей.</p>
+
+<h2>Изменения</h2>
+<p>Если политика изменится, мы обновим дату вверху страницы.</p>
+
+<h2>Связаться</h2>
+<p><a href="mailto:kolesnikov99.kz@gmail.com">kolesnikov99.kz@gmail.com</a></p>
+
+</div>
+
+<!-- ============ EN ============ -->
+<div lang="en">
+
+<h1>Privacy Policy</h1>
+<p class="updated">Updated 3 September 2026</p>
+
+<div class="note">
+  <p>Calmness deals with something people don't say out loud. So the principle is
+  simple: <strong>almost everything stays on your phone</strong>. Below is an honest
+  list of what leaves the device and what never does.</p>
+</div>
+
+<h2>No account</h2>
+<p>We never ask for your name, email, phone number or a login. There is no sign-up,
+and we don't know who you are.</p>
+
+<h2>What stays on the device only</h2>
+<ul>
+  <li>your journal and every entry in it;</li>
+  <li>SOS session history, mood check-ins, the evening log;</li>
+  <li>your conversation with the mentor — the chat history is stored locally;</li>
+  <li>90-day program progress, playbook, pledges, streak;</li>
+  <li>the list of apps and sites you blocked.</li>
+</ul>
+<p>This data lives in the app's protected storage on your device. If you have iCloud
+backup enabled it goes into that backup — Apple makes it, and we have no access
+to it.</p>
+
+<h2>Screen Time</h2>
+<p>Blocking works through Apple's own Family Controls. The apps and sites you pick
+are represented by opaque tokens encrypted by the system. <strong>Neither we nor
+anyone else can see what you blocked.</strong></p>
+
+<h2>What leaves the device</h2>
+<p>Exactly two flows, both over a secure connection.</p>
+
+<h2>1. The mentor and insights</h2>
+<p>When you write to the mentor, or the app prepares an insight, the following is
+sent to our proxy server and on to OpenAI:</p>
+<ul>
+  <li>the text of your chat messages;</li>
+  <li>de-identified context: streak length, number of sessions and the share of
+  successful ones, trigger tags (such as "stress" or "night"), the score from the
+  intake quiz, the tone you chose, your risk-window hour;</li>
+  <li>a random device identifier (see below).</li>
+</ul>
+<p>Never sent: your journal, post-relapse notes, name, contacts. Under the OpenAI
+API terms, data sent this way is not used to train models.</p>
+
+<h2>2. Product analytics</h2>
+<p>We count de-identified events to see where the app breaks: launch, a completed
+program step, a finished SOS (mode, outcome, duration), a purchase, an onboarding
+screen. Short technical properties come along — a trigger identifier or a mood tag,
+for example. <strong>No free text, no journal, no conversations.</strong>
+The processor is PostHog.</p>
+
+<h2>The random identifier</h2>
+<p>On first launch the app generates a random string and keeps it on the device.
+It is not linked to your Apple ID, email or advertising identifiers; it exists only
+so one person's events don't mix with another's. Deleting the app deletes it.</p>
+
+<h2>Purchases</h2>
+<p>Subscriptions are handled by Apple. Card details and your Apple ID never reach
+us — the app only sees whether a subscription is active.</p>
+
+<h2>Notifications</h2>
+<p>All reminders are scheduled on the device itself. We don't send server pushes
+and don't know whether you opened one.</p>
+
+<h2>How long it is kept</h2>
+<ul>
+  <li>On the device — until you delete the data or the app.</li>
+  <li>Mentor requests are not retained by us beyond what's needed to answer;
+  on OpenAI's side, per their policy, up to 30 days for abuse monitoring.</li>
+  <li>Analytics events — up to 12 months.</li>
+</ul>
+
+<h2>How to erase everything</h2>
+<ul>
+  <li>In the app: <strong>Profile → Delete all data</strong>. Local data is erased
+  permanently.</li>
+  <li>Deleting the app erases local data and the random identifier.</li>
+  <li>To erase analytics events, email us — we'll delete them by identifier
+  (it's included in the file from "Profile → Export data").</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>You may request a copy of your data, its correction or deletion, and object to
+processing. Write to the address below — we reply within 30 days.</p>
+
+<h2>Age</h2>
+<p>The app is intended for adults (18+). We deliberately do not collect children's
+data.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we update the date at the top of the page.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:kolesnikov99.kz@gmail.com">kolesnikov99.kz@gmail.com</a></p>
+
+</div>
+
+<footer>
+  <p><a href="./">Calmness</a> · <a href="terms.html">Условия использования / Terms of Use</a></p>
+</footer>
+
+</div>
+<script src="lang.js"></script>
+</body>
+</html>
