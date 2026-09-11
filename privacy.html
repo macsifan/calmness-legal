@@ -107,8 +107,11 @@
 <h2>Сколько это хранится</h2>
 <ul>
   <li>На устройстве — пока ты сам не удалишь данные или приложение.</li>
-  <li>Запросы к наставнику мы не сохраняем дольше, чем нужно для ответа;
-  на стороне OpenAI — по их политике, до 30 дней для защиты от злоупотреблений.</li>
+  <li>Сообщения наставнику мы не сохраняем: наш сервер передаёт их дальше и
+  ничего не пишет на диск. На стороне OpenAI — по их политике, до 30 дней
+  для защиты от злоупотреблений.</li>
+  <li>Счётчики частоты запросов (случайный идентификатор установки и IP-адрес)
+  стираются автоматически через сутки после последнего запроса.</li>
   <li>События аналитики — до 12 месяцев.</li>
 </ul>
 
@@ -233,8 +236,11 @@ and don't know whether you opened one.</p>
 <h2>How long it is kept</h2>
 <ul>
   <li>On the device — until you delete the data or the app.</li>
-  <li>Mentor requests are not retained by us beyond what's needed to answer;
-  on OpenAI's side, per their policy, up to 30 days for abuse monitoring.</li>
+  <li>We do not store your messages to the mentor: our server passes them on
+  and writes nothing to disk. On OpenAI's side, per their policy, up to 30 days
+  for abuse monitoring.</li>
+  <li>Rate-limit counters (the random installation identifier and IP address)
+  are erased automatically 24 hours after the last request.</li>
   <li>Analytics events — up to 12 months.</li>
 </ul>
 
