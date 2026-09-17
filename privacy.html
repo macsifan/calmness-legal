@@ -21,7 +21,7 @@
 <div lang="ru">
 
 <h1>Политика конфиденциальности</h1>
-<p class="updated">Обновлено 10 сентября 2026</p>
+<p class="updated">Обновлено 15 сентября 2026</p>
 
 <div class="note">
   <p>Calmness — приложение о том, о чём не говорят вслух. Поэтому принцип простой:
@@ -79,13 +79,23 @@
 По условиям OpenAI API переданные данные не используются для обучения моделей.</p>
 
 <h2>2. Аналитика продукта</h2>
-<p>Мы считаем псевдонимные события — они привязаны к случайному идентификатору
-установки, а не к тебе лично, — чтобы понимать, где приложение ломается:
-запуск, пройденный шаг программы, завершённый SOS (режим, исход, длительность),
-оформленная подписка, экран онбординга. К событию прикладываются короткие
-технические свойства — например, идентификатор триггера или отметка настроения.
-<strong>Свободного текста, дневника и переписки в аналитике нет.</strong>
-Обработчик — PostHog.</p>
+<p><strong>Только с твоего согласия.</strong> Вопрос задаётся на втором экране
+онбординга, до первого события; тумблер выключен, пока ты его не включишь.
+До ответа приложение не отправляет статистику и не копит её, чтобы отправить
+потом. Решение меняется в любой момент: <strong>Профиль → Делиться статистикой
+использования</strong>.</p>
+<p>При включённом тумблере мы считаем псевдонимные события — они привязаны
+к случайному идентификатору установки, а не к тебе лично: запуск, шаг
+онбординга, пройденный шаг программы, завершённый SOS (режим, исход,
+длительность), отметка настроения, срыв, итог вечера, теги триггеров, показ
+стены оплаты, покупка и возврат с ценой на твоей витрине, версия сборки, язык,
+версия iOS и страна витрины. <strong>Свободного текста, дневника и переписки
+в аналитике нет.</strong> Обработчик — PostHog.</p>
+<p><strong>Отчёты о сбоях — отдельное согласие и отдельный тумблер</strong>
+(<strong>Профиль → Отчёты о сбоях</strong>). При включённом мы получаем из
+системной диагностики Apple тип падения или зависания и верх стека — не больше
+20 КБ текста, без твоих записей. Отправляется туда же, в PostHog. По умолчанию
+выключено.</p>
 
 <h2>Случайный идентификатор</h2>
 <p>При первом запуске приложение создаёт случайный набор символов и хранит его
@@ -96,9 +106,12 @@
 <h2>Покупки</h2>
 <p>Оплату обрабатывает Apple; номер карты и Apple ID нам не передаются.
 Мы обрабатываем сведения о подписке и события покупки, восстановления,
-продления, истечения и возврата. Для аналитики покупка может связываться со
-случайным идентификатором приложения (appAccountToken); данные событий
-передаются PostHog. Это не рекламный идентификатор.</p>
+продления, истечения и возврата — это нужно для самой подписки и не зависит
+от твоего выбора про статистику. Покупка помечается случайным идентификатором
+приложения (appAccountToken); это не рекламный идентификатор. Если статистика
+включена, это тот же идентификатор установки, и покупка видна в аналитике
+вместе с остальными событиями. Если выключена — для покупок заводится
+отдельный идентификатор, и связать их с продуктовой аналитикой нельзя.</p>
 
 <h2>Уведомления</h2>
 <p>Все напоминания планируются на самом устройстве. Мы не отправляем пуши
@@ -152,7 +165,7 @@
 <div lang="en">
 
 <h1>Privacy Policy</h1>
-<p class="updated">Updated 10 September 2026</p>
+<p class="updated">Updated 15 September 2026</p>
 
 <div class="note">
   <p>Calmness deals with something people don't say out loud. So the principle is
@@ -210,12 +223,22 @@ with these processors. Under the OpenAI API terms, data sent this way is not use
 to train models.</p>
 
 <h2>2. Product analytics</h2>
-<p>We count pseudonymous events — tied to a random installation identifier
-rather than to you personally — to see where the app breaks: launch, a completed
-program step, a finished SOS (mode, outcome, duration), a purchase, an onboarding
-screen. Short technical properties come along — a trigger identifier or a mood tag,
-for example. <strong>No free text, no journal, no conversations.</strong>
-The processor is PostHog.</p>
+<p><strong>Only with your consent.</strong> We ask on the second onboarding
+screen, before the first event; the switch is off until you turn it on. Until
+you answer, the app sends no statistics and stores none to send later. You can
+change your mind at any time: <strong>Profile → Share usage statistics</strong>.</p>
+<p>With the switch on we count pseudonymous events — tied to a random
+installation identifier rather than to you personally: launch, an onboarding
+step, a completed program step, a finished SOS (mode, outcome, duration), a mood
+check-in, a relapse, an evening outcome, trigger tags, a paywall view, a purchase
+or refund with the price on your storefront, the build version, language, iOS
+version and storefront country. <strong>No free text, no journal, no
+conversations.</strong> The processor is PostHog.</p>
+<p><strong>Crash reports are a separate consent and a separate switch</strong>
+(<strong>Profile → Crash reports</strong>). With it on we receive the crash or
+hang type and the top of the stack from Apple's system diagnostics — no more
+than 20 KB of text, and none of your entries. It goes to PostHog too. Off by
+default.</p>
 
 <h2>The random identifier</h2>
 <p>On first launch the app generates a random string and keeps it on the device.
@@ -225,9 +248,12 @@ so one person's events don't mix with another's. Deleting the app deletes it.</p
 <h2>Purchases</h2>
 <p>Apple processes payments; we do not receive your card number or Apple ID.
 We process subscription information and purchase, restore, renewal, expiration
-and refund events. Purchases may be linked to the app's random identifier through
-appAccountToken for analytics, with event data sent to PostHog. This is not an
-advertising identifier.</p>
+and refund events — this is required for the subscription itself and does not
+depend on your statistics choice. A purchase is tagged with the app's random
+identifier (appAccountToken); this is not an advertising identifier. If
+statistics are on, that is the same installation identifier, so the purchase
+appears in analytics alongside the other events. If they are off, a separate
+purchase-only identifier is used and the two cannot be linked.</p>
 
 <h2>Notifications</h2>
 <p>All reminders are scheduled on the device itself. We don't send server pushes
