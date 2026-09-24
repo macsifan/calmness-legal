@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Политика конфиденциальности — Calmness</title>
+<title>Политика конфиденциальности – Calmness</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
 <p class="updated">Обновлено 24 сентября 2026</p>
 
 <div class="note">
-  <p>Calmness — приложение о том, о чём не говорят вслух. Поэтому принцип простой:
-  <strong>почти всё остаётся на твоём телефоне</strong>. Ниже — честный список того,
+  <p>Calmness – приложение о том, о чём не говорят вслух. Поэтому принцип простой:
+  <strong>почти всё остаётся на твоём телефоне</strong>. Ниже – честный список того,
   что покидает устройство, и что не покидает никогда.</p>
 </div>
 
@@ -37,18 +37,18 @@
 <ul>
   <li>дневник и все записи в нём;</li>
   <li>история SOS-сессий, чек-ины настроения, журнал вечеров;</li>
-  <li>переписка с наставником — история диалога хранится локально;</li>
+  <li>переписка с наставником – история диалога хранится локально;</li>
   <li>прогресс программы 90 дней, плейбук, обещания, стрик;</li>
   <li>список приложений и сайтов, которые ты заблокировал.</li>
 </ul>
 <p>Эти данные лежат в защищённой области приложения на устройстве и никуда
 не синхронизируются: отдельного облака у приложения нет. Если у тебя включена
-резервная копия iPhone, они попадают в неё вместе с данными других приложений —
+резервная копия iPhone, они попадают в неё вместе с данными других приложений –
 эту копию делает Apple, и доступа к ней у нас нет. Перенести историю на другой
 телефон можно файлом копии из Профиля.</p>
 
 <h2>Экранное время</h2>
-<p>Блокировка работает через системный механизм Apple — Family Controls.
+<p>Блокировка работает через системный механизм Apple – Family Controls.
 Выбранные приложения и сайты представлены непрозрачными токенами, которые
 шифрует сама система. <strong>Ни мы, ни кто-либо ещё не видит, что именно ты
 заблокировал.</strong></p>
@@ -60,7 +60,7 @@
 <p><strong>Включаются только после твоего отдельного согласия.</strong> До него
 приложение не отправляет ничего: наставник и разборы молчат, всё остальное
 работает. Запрос проходит через наш сервер на Cloudflare и передаётся OpenAI.
-Разрешение можно отозвать в Профиле — новые запросы прекратятся. Отзыв не
+Разрешение можно отозвать в Профиле – новые запросы прекратятся. Отзыв не
 удаляет автоматически то, что обработчики получили раньше.</p>
 <p>С согласием уходят:</p>
 <ul>
@@ -70,11 +70,11 @@
   «ночь»), самооценка из вводного опроса, настроение дня, отметки вечеров за
   последнюю неделю, номер и название шага программы, часы риска и выбранный тон
   общения;</li>
-  <li>случайный идентификатор установки (о нём ниже) и сетевой IP-адрес —
+  <li>случайный идентификатор установки (о нём ниже) и сетевой IP-адрес –
   он нужен серверу, чтобы ограничивать частоту запросов.</li>
 </ul>
 <p>Не уходят: дневник, записи после срыва, свой шаг программы, имя, контакты.
-Исходные записи остаются на телефоне — с согласием отправляются перечисленные
+Исходные записи остаются на телефоне – с согласием отправляются перечисленные
 выше сводки. Не пиши в чат то, что не хочешь передавать этим обработчикам.
 По условиям OpenAI API переданные данные не используются для обучения моделей.</p>
 
@@ -84,16 +84,16 @@
 приложения. Выключить можно в любой момент: <strong>Я → Делиться статистикой
 использования</strong> или «Данные и согласия» на экране подписки. После
 выключения новые события не отправляются, а ещё не отправленные удаляются.</p>
-<p>При включённом тумблере мы считаем псевдонимные события — они привязаны
+<p>При включённом тумблере мы считаем псевдонимные события – они привязаны
 к случайному идентификатору установки, а не к тебе лично: запуск, шаг
 онбординга, пройденный шаг программы, завершённый SOS (режим, исход,
 длительность), отметка настроения, срыв, итог вечера, теги триггеров, показ
 стены оплаты, покупка и возврат с ценой на твоей витрине, версия сборки, язык,
 версия iOS и страна витрины. <strong>Свободного текста, дневника и переписки
-в аналитике нет.</strong> Обработчик — PostHog.</p>
-<p><strong>Отчёты о сбоях — отдельный тумблер</strong>
+в аналитике нет.</strong> Обработчик – PostHog.</p>
+<p><strong>Отчёты о сбоях – отдельный тумблер</strong>
 (<strong>Я → Отчёты о сбоях</strong>). При включённом мы получаем из
-системной диагностики Apple тип падения или зависания и верх стека — не больше
+системной диагностики Apple тип падения или зависания и верх стека – не больше
 20 КБ текста, без твоих записей. Отправляется туда же, в PostHog. По умолчанию
 включено.</p>
 
@@ -106,11 +106,11 @@
 <h2>Покупки</h2>
 <p>Оплату обрабатывает Apple; номер карты и Apple ID нам не передаются.
 Мы обрабатываем сведения о подписке и события покупки, восстановления,
-продления, истечения и возврата — это нужно для самой подписки и не зависит
+продления, истечения и возврата – это нужно для самой подписки и не зависит
 от твоего выбора про статистику. Покупка помечается случайным идентификатором
 приложения (appAccountToken); это не рекламный идентификатор. Если статистика
 включена, это тот же идентификатор установки, и покупка видна в аналитике
-вместе с остальными событиями. Если выключена — для покупок заводится
+вместе с остальными событиями. Если выключена – для покупок заводится
 отдельный идентификатор, и связать их с продуктовой аналитикой нельзя.</p>
 
 <h2>Уведомления</h2>
@@ -119,13 +119,13 @@
 
 <h2>Сколько это хранится</h2>
 <ul>
-  <li>На устройстве — пока ты сам не удалишь данные или приложение.</li>
+  <li>На устройстве – пока ты сам не удалишь данные или приложение.</li>
   <li>Сообщения наставнику мы не сохраняем: наш сервер передаёт их дальше и
-  ничего не пишет на диск. На стороне OpenAI — по их политике, до 30 дней
+  ничего не пишет на диск. На стороне OpenAI – по их политике, до 30 дней
   для защиты от злоупотреблений.</li>
   <li>Счётчики частоты запросов (случайный идентификатор установки и IP-адрес)
   стираются автоматически через сутки после последнего запроса.</li>
-  <li>События аналитики — до 12 месяцев.</li>
+  <li>События аналитики – до 12 месяцев.</li>
 </ul>
 
 <h2>Как всё удалить</h2>
@@ -133,20 +133,20 @@
   <li>В приложении: <strong>Я → Удалить все данные</strong>. Стирает локальные
   данные безвозвратно.</li>
   <li>Удаление приложения стирает локальные данные и случайный идентификатор.</li>
-  <li>Экспорт копии — на вкладке «Я», а если доступ к приложению закончился —
+  <li>Экспорт копии – на вкладке «Я», а если доступ к приложению закончился –
   через «Данные и согласия» на экране подписки. В файле копии есть поле
   <code>analyticsUserID</code>: это идентификатор для запроса на удаление
   событий аналитики. Сохрани его до удаления локальных данных.</li>
   <li>Удаление в приложении очищает локальное хранилище. Чтобы удалить уже
   отправленные события аналитики, напиши в поддержку и приложи этот
   идентификатор.</li>
-  <li>Чтобы стереть события аналитики, напиши нам — удалим по идентификатору
+  <li>Чтобы стереть события аналитики, напиши нам – удалим по идентификатору
   (он есть в файле из «Я → Экспорт данных»).</li>
 </ul>
 
 <h2>Твои права</h2>
 <p>Ты можешь запросить копию своих данных, их исправление или удаление,
-а также возразить против обработки. Напиши на адрес ниже — ответим в течение
+а также возразить против обработки. Напиши на адрес ниже – ответим в течение
 30 дней.</p>
 
 <h2>Возраст</h2>
@@ -181,13 +181,13 @@ and we don't know who you are.</p>
 <ul>
   <li>your journal and every entry in it;</li>
   <li>SOS session history, mood check-ins, the evening log;</li>
-  <li>your conversation with the mentor — the chat history is stored locally;</li>
+  <li>your conversation with the mentor – the chat history is stored locally;</li>
   <li>90-day program progress, playbook, pledges, streak;</li>
   <li>the list of apps and sites you blocked.</li>
 </ul>
 <p>This data lives in the app's protected storage on your device and is not
 synced anywhere: the app has no cloud of its own. If you have iPhone backup
-enabled, it goes into that backup along with other apps' data — Apple makes it,
+enabled, it goes into that backup along with other apps' data – Apple makes it,
 and we have no access to it. To move your history to another phone, use the
 backup file from Profile.</p>
 
@@ -217,7 +217,7 @@ automatically erase what the processors received earlier.</p>
   which the server needs to limit request rates.</li>
 </ul>
 <p>Never sent: your journal, post-relapse notes, your own custom step, name,
-contacts. The original entries stay on the phone — with consent, the summaries
+contacts. The original entries stay on the phone – with consent, the summaries
 listed above are sent. Do not put anything in chat that you do not want shared
 with these processors. Under the OpenAI API terms, data sent this way is not used
 to train models.</p>
@@ -228,7 +228,7 @@ collected from the first launch; the first screen of the app says so. You can
 turn them off at any time: <strong>Me → Share usage statistics</strong> or
 "Data and consents" on the subscription screen. After you turn them off, no new
 events are sent and events not yet sent are deleted.</p>
-<p>With the switch on we count pseudonymous events — tied to a random
+<p>With the switch on we count pseudonymous events – tied to a random
 installation identifier rather than to you personally: launch, an onboarding
 step, a completed program step, a finished SOS (mode, outcome, duration), a mood
 check-in, a relapse, an evening outcome, trigger tags, a paywall view, a purchase
@@ -237,7 +237,7 @@ version and storefront country. <strong>No free text, no journal, no
 conversations.</strong> The processor is PostHog.</p>
 <p><strong>Crash reports have a separate switch</strong>
 (<strong>Me → Crash reports</strong>). With it on we receive the crash or
-hang type and the top of the stack from Apple's system diagnostics — no more
+hang type and the top of the stack from Apple's system diagnostics – no more
 than 20 KB of text, and none of your entries. It goes to PostHog too. On by
 default.</p>
 
@@ -249,7 +249,7 @@ so one person's events don't mix with another's. Deleting the app deletes it.</p
 <h2>Purchases</h2>
 <p>Apple processes payments; we do not receive your card number or Apple ID.
 We process subscription information and purchase, restore, renewal, expiration
-and refund events — this is required for the subscription itself and does not
+and refund events – this is required for the subscription itself and does not
 depend on your statistics choice. A purchase is tagged with the app's random
 identifier (appAccountToken); this is not an advertising identifier. If
 statistics are on, that is the same installation identifier, so the purchase
@@ -262,13 +262,13 @@ and don't know whether you opened one.</p>
 
 <h2>How long it is kept</h2>
 <ul>
-  <li>On the device — until you delete the data or the app.</li>
+  <li>On the device – until you delete the data or the app.</li>
   <li>We do not store your messages to the mentor: our server passes them on
   and writes nothing to disk. On OpenAI's side, per their policy, up to 30 days
   for abuse monitoring.</li>
   <li>Rate-limit counters (the random installation identifier and IP address)
   are erased automatically 24 hours after the last request.</li>
-  <li>Analytics events — up to 12 months.</li>
+  <li>Analytics events – up to 12 months.</li>
 </ul>
 
 <h2>How to erase everything</h2>
@@ -286,7 +286,7 @@ and don't know whether you opened one.</p>
 
 <h2>Your rights</h2>
 <p>You may request a copy of your data, its correction or deletion, and object to
-processing. Write to the address below — we reply within 30 days.</p>
+processing. Write to the address below – we reply within 30 days.</p>
 
 <h2>Age</h2>
 <p>The app is intended for adults (18+). We deliberately do not collect children's
