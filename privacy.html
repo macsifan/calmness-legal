@@ -79,11 +79,11 @@
 По условиям OpenAI API переданные данные не используются для обучения моделей.</p>
 
 <h2>2. Аналитика продукта</h2>
-<p><strong>Только с твоего согласия.</strong> Вопрос задаётся на втором экране
-онбординга, до первого события; тумблер выключен, пока ты его не включишь.
-До ответа приложение не отправляет статистику и не копит её, чтобы отправить
-потом. Решение меняется в любой момент: <strong>Я → Делиться статистикой
-использования</strong>.</p>
+<p><strong>Включена по умолчанию, выключается в один тап.</strong> Статистика
+использования собирается с первого запуска; об этом сказано на первом экране
+приложения. Выключить можно в любой момент: <strong>Я → Делиться статистикой
+использования</strong> или «Данные и согласия» на экране подписки. После
+выключения новые события не отправляются, а ещё не отправленные удаляются.</p>
 <p>При включённом тумблере мы считаем псевдонимные события — они привязаны
 к случайному идентификатору установки, а не к тебе лично: запуск, шаг
 онбординга, пройденный шаг программы, завершённый SOS (режим, исход,
@@ -91,11 +91,11 @@
 стены оплаты, покупка и возврат с ценой на твоей витрине, версия сборки, язык,
 версия iOS и страна витрины. <strong>Свободного текста, дневника и переписки
 в аналитике нет.</strong> Обработчик — PostHog.</p>
-<p><strong>Отчёты о сбоях — отдельное согласие и отдельный тумблер</strong>
+<p><strong>Отчёты о сбоях — отдельный тумблер</strong>
 (<strong>Я → Отчёты о сбоях</strong>). При включённом мы получаем из
 системной диагностики Apple тип падения или зависания и верх стека — не больше
 20 КБ текста, без твоих записей. Отправляется туда же, в PostHog. По умолчанию
-выключено.</p>
+включено.</p>
 
 <h2>Случайный идентификатор</h2>
 <p>При первом запуске приложение создаёт случайный набор символов и хранит его
@@ -223,10 +223,11 @@ with these processors. Under the OpenAI API terms, data sent this way is not use
 to train models.</p>
 
 <h2>2. Product analytics</h2>
-<p><strong>Only with your consent.</strong> We ask on the second onboarding
-screen, before the first event; the switch is off until you turn it on. Until
-you answer, the app sends no statistics and stores none to send later. You can
-change your mind at any time: <strong>Me → Share usage statistics</strong>.</p>
+<p><strong>On by default, off in one tap.</strong> Usage statistics are
+collected from the first launch; the first screen of the app says so. You can
+turn them off at any time: <strong>Me → Share usage statistics</strong> or
+"Data and consents" on the subscription screen. After you turn them off, no new
+events are sent and events not yet sent are deleted.</p>
 <p>With the switch on we count pseudonymous events — tied to a random
 installation identifier rather than to you personally: launch, an onboarding
 step, a completed program step, a finished SOS (mode, outcome, duration), a mood
@@ -234,10 +235,10 @@ check-in, a relapse, an evening outcome, trigger tags, a paywall view, a purchas
 or refund with the price on your storefront, the build version, language, iOS
 version and storefront country. <strong>No free text, no journal, no
 conversations.</strong> The processor is PostHog.</p>
-<p><strong>Crash reports are a separate consent and a separate switch</strong>
+<p><strong>Crash reports have a separate switch</strong>
 (<strong>Me → Crash reports</strong>). With it on we receive the crash or
 hang type and the top of the stack from Apple's system diagnostics — no more
-than 20 KB of text, and none of your entries. It goes to PostHog too. Off by
+than 20 KB of text, and none of your entries. It goes to PostHog too. On by
 default.</p>
 
 <h2>The random identifier</h2>
